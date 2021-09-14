@@ -6,6 +6,12 @@ module.exports = {
             colors: {
                 dark: "#292626",
             },
+            letterSpacing: {
+                big: "5px",
+            },
+            fontSize: {
+                xxs: "10px",
+            },
         },
     },
     variants: {

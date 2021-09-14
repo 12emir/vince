@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useRouter } from "next/router";
 import { useTheme } from "../components/ThemeContext";
 import Link from "next/link";
+import Footer from "../components/Footer";
 
 const About = () => {
     const router = useRouter();
@@ -25,7 +26,10 @@ const About = () => {
                 transition: { duration: 0.4, ease: "easeOut" },
             }}
         >
-            <Link href="/">Go to Home</Link>
+            <div className="w-full h-screen flex justify-center items-center">
+                About
+            </div>
+            <Footer />
         </motion.div>
     );
 };

@@ -9,7 +9,9 @@ const Layout = ({ children }) => {
     return (
         <div className="">
             <Navbar />
-            <AnimatePresence>{menuOpen && <Menu />}</AnimatePresence>
+            <AnimatePresence exitBeforeEnter>
+                {menuOpen && <Menu />}
+            </AnimatePresence>
 
             {children}
         </div>

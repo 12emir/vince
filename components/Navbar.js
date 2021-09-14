@@ -1,14 +1,19 @@
 import { useState } from "react";
-import { useTheme } from "../components/ThemeContext";
+import Logo from "../components/Logo";
 
 import Link from "next/link";
+import { useTheme } from "../components/ThemeContext";
 
 import Hamburger from "./Hamburger";
 
 const Navbar = () => {
+    const { menuOpen } = useTheme();
     return (
-        <div className="w-full flex justify-between p-6 bg-gray-100">
-            <h1>LOGO</h1>
+        <div
+            style={{ backdropFilter: "blur(10px)" }}
+            className={` w-full fixed flex items-center justify-center  p-6  z-30 `}
+        >
+            <Logo />
             <Hamburger />
         </div>
     );
